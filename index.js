@@ -2,7 +2,7 @@ const { configDotenv } = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const pinRoute = require("../api/routes/Pin");
+const pins = require("./routes/Pins");
 const user = require("../api/routes/Users");
 const app = express();
 
@@ -14,7 +14,7 @@ app.use(express.json());
 
 //All the routes
 
-app.use("/api/pins", pinRoute);
+app.use("/api/pins", pins);
 app.use("/api/users", user);
 
 //Connect to db
