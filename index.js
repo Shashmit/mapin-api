@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const pins = require("./routes/Pins");
-const user = require("../api/routes/Users");
+const user = require("./routes/Users");
 const app = express();
 
 // all the using tools
