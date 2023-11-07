@@ -27,7 +27,7 @@ mongoose
   .connect(process.env.CONNECTION_TO_MONGOOSE)
   .then(() => {
     app.listen(port, () => {
-      console.log("YOUR SERVER IS RUNNING");
+      console.log("YOUR SERVER IS RUNNING" + port);
     });
   })
   .catch((error) => {
