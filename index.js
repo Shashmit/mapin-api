@@ -23,7 +23,7 @@ app.use("/users", user);
 mongoose
   .connect(process.env.CONNECTION_TO_MONGOOSE)
   .then(() => {
-    app.listen(process.env.PORT_NUMBER || 4000, () => {
+    app.listen(process.env.PORT_NUMBER || 4000, "0.0.0.0", () => {
       console.log("YOUR SERVER IS RUNNING");
     });
   })
