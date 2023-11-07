@@ -1,4 +1,4 @@
-const { configDotenv } = require("dotenv");
+const dotenv = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -10,7 +10,7 @@ const app = express();
 
 // all the using tools
 app.use(cors());
-configDotenv();
+dotenv.config();
 
 app.use(express.json());
 
