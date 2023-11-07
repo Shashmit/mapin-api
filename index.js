@@ -2,8 +2,10 @@ const { configDotenv } = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+
 const pins = require("./routes/Pins");
 const user = require("./routes/Users");
+
 const app = express();
 
 // all the using tools
@@ -14,8 +16,8 @@ app.use(express.json());
 
 //All the routes
 
-app.use("/api/pins", pins);
-app.use("/api/users", user);
+app.use("/pins", pins);
+app.use("/users", user);
 
 //Connect to db
 mongoose
