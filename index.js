@@ -7,7 +7,11 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 // all the using tools
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 dotenv.config();
 
 app.use(express.json());
